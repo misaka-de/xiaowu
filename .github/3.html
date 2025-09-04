@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>专业支部信息查询</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        select { padding: 10px; font-size: 16px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h2>请选择您的专业</h2>
+    
+    <select id="majorSelect" onchange="navigateToImage()">
+        <option value="">-- 请选择专业 --</option>
+        <option value="https://link.bmwas.cn/vmini?c=WcAEPj">研究生第一党支部</option>
+        <option value="https://link.bmwas.cn/vmini?c=TWtTLp">研究生第二党支部</option>
+        <option value="https://link.bmwas.cn/vmini?c=VgTRYS">研究生第三党支部</option>
+        <!-- 添加更多专业选项，value值替换为实际图片URL -->
+    </select>
+
+    <script>
+        function navigateToImage() {
+            var selectBox = document.getElementById("majorSelect");
+            var selectedValue = selectBox.value;
+            
+            // 如果用户选择了有效选项（且不是默认的提示选项），则跳转
+            if (selectedValue !== "") {
+                window.location.href = selectedValue; // 直接跳转到图片URL
+            }
+        }
+    </script>
+</body>
+</html>
